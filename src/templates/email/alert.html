@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background-color: #ff4444;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .content {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .status-change {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔴 Alerte Changement de Statut</h1>
+  </div>
+  
+  <div class="content">
+    <h2>Détails de l'incident</h2>
+    <p><strong>Service :</strong> {{serviceName}}</p>
+    
+    <div class="status-change">
+      <p><strong>Changement de statut :</strong></p>
+      <p>{{previousStatus}} → {{status}}</p>
+    </div>
+    
+    <p><strong>Détecté le :</strong> {{timestamp}}</p>
+    
+    <p>Une intervention est requise pour vérifier l'état du service.</p>
+    
+    <a href="{{dashboardUrl}}" class="button">
+      Voir le Dashboard
+    </a>
+  </div>
+  
+  <div class="footer">
+    <p>Cet email a été envoyé automatiquement par le système de monitoring Crypto Analyzer.</p>
+    <p>Ne pas répondre à cet email.</p>
+  </div>
+</body>
+</html> 
